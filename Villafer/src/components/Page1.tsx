@@ -1,22 +1,25 @@
 import React from 'react';
-import { View, Text, StyleSheet, Dimensions } from 'react-native';
+import { View, Text, StyleSheet, Dimensions, Image } from 'react-native';
 
 const { width: windowWidth, height: windowHeight } = Dimensions.get("window");
 
 
 const Page1 = () => {
   return (
-    <View style={style.container}>
-      <Text style = {style.Text}>oh no step brother</Text>
+    <View style = {style.container}>
+      <Image
+        source = {require('../image/please.jpg')} 
+        style = {style.image}
+      />
+      <Text style = {style.Text}>Hallo!{'\n'}I am Jazric Forte{'\n'}I like BLACK MEN</Text>
     </View>
   );
 };
 
-
 const style = StyleSheet.create({
     container: {
       flex: 1,
-      backgroundColor: '#00380f',
+      backgroundColor: 'rgb(112, 176, 249)',
       justifyContent: 'center',
       alignItems: 'center',
     },
@@ -32,6 +35,11 @@ const style = StyleSheet.create({
         width: windowWidth * 0.8,
         height: windowHeight * 0.5,
         marginTop: 20,
+    },
+    image: {
+      width: 200,
+      height: 200,
+      marginTop: 20,
     },
   });
 
