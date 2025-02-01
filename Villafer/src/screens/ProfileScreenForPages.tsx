@@ -1,5 +1,5 @@
 import React from "react";
-import { StyleSheet, View, Text } from "react-native";
+import { StyleSheet, View, Text, Image} from "react-native";
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import { RouteProp } from "@react-navigation/native";
 import { RootStackParamList } from "../navigation/AppNavigator";
@@ -21,14 +21,41 @@ const ProfileScreenForPages: React.FC<Props> = ({ route }) => {
             <Tab.Navigator screenOptions={{
                 headerShown: false,
                 tabBarStyle: {
-                    backgroundColor: '#002507',
+                    backgroundColor: '#rgb(186, 107, 242)',
+                    height: 100,
+                    paddingBottom: 10,
+                    
                 },
                 tabBarActiveTintColor: '#ffffff',
-                tabBarInactiveTintColor: '#888888',
+                tabBarInactiveTintColor: 'rgb(0, 0, 0)',
+                tabBarLabelStyle: {
+                    fontSize: 20,
+                    top: 30
+                },
             }}
             >
-                <Tab.Screen name="Page1" component={Page1} />
-                <Tab.Screen name="Page2" component={Page2} />
+                <Tab.Screen name="Who I am"
+                 component={Page1}
+                 options={{
+                    tabBarIcon: ({ color, size }) => (
+                        <Image
+                            source = {require('../image/kyot.jpg')}
+                            style={{ width: 50, height: 50, top: 20}}
+                        />
+                    ),
+                }}
+                />
+                <Tab.Screen name="What I like"
+                 component={Page2} 
+                 options={{
+                    tabBarIcon: ({ color, size }) => (
+                        <Image
+                            source = {require('../image/ughhhh.jpg')}
+                            style={{ width: 50, height: 50, top: 20}}
+                        />
+                    ),
+                }}
+                 />
             </Tab.Navigator>
     );
 };

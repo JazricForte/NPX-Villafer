@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { StyleSheet, View, Text, Button, TextInput, KeyboardAvoidingView, Dimensions, TouchableOpacity } from "react-native";
+import { StyleSheet, View, Text, Button, TextInput, KeyboardAvoidingView, ImageBackground, Dimensions, TouchableOpacity } from "react-native";
 import { StackNavigationProp } from "@react-navigation/stack";
 import { RootStackParamList } from "../navigation/AppNavigator";
 
@@ -9,7 +9,7 @@ type Props = {
     navigation: HomeScreenNavigationProp;
 } 
 
-const windowWidth = Dimensions.get('window').width;
+const { width: windowWidth, height: windowHeight } = Dimensions.get("window");
 
 const HomeScreenForPages: React.FC<Props> = ({navigation}) => {
     const [userId, setUserId] = useState('');
@@ -22,12 +22,18 @@ const checkValidity = () => {
     }
     
     return (
+        <ImageBackground
+                  source={require('../image/beauty.jpg')} // Ensure this path is correct
+                  style={styles.background}
+            >
+                <View style={styles.overlay} />
         <View style = {styles.container}>
             <KeyboardAvoidingView behavior = 'padding' style = {styles.container}>
             <Text style = {styles.text}>Ambatubasssssssss</Text>
                 <TextInput
                     style = {styles.input}
                     placeholder = 'Enter your user ID'
+                    placeholderTextColor='rgb(255, 255, 255)'
                     value = {userId}
                     onChangeText = {setUserId}
                 />
@@ -44,6 +50,7 @@ const checkValidity = () => {
                 }
         </KeyboardAvoidingView>
         </View>
+        </ImageBackground>
     )
 };
 
@@ -52,12 +59,11 @@ const styles = StyleSheet.create({
         flex: 1,
         justifyContent: 'center',
         alignItems: 'center',
-        backgroundColor:'rgb(186, 107, 242)',
     },
     input: {
         height: 40,
         borderColor: 'rgb(50, 0, 111)',
-        color: 'rgb(255, 255, 255)',
+        color: 'rgb(0, 0, 0)',
         borderWidth: 1,
         marginBottom: 20,
         paddingHorizontal: 10,
@@ -85,6 +91,15 @@ const styles = StyleSheet.create({
         color: '#ffffff',
         fontSize: 16,
     },
+    background: {
+        flex: 1,
+        width: windowWidth,
+        height: windowHeight,
+      },
+      overlay: {
+        ...StyleSheet.absoluteFillObject,
+        backgroundColor: 'rgba(0, 0, 0, 0.15)', // Adjust the opacity to make the image darker
+      },
 });
 
 export default HomeScreenForPages;
