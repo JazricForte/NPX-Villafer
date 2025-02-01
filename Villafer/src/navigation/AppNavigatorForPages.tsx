@@ -1,8 +1,8 @@
 import React from "react";
 import { NavigationContainer } from "@react-navigation/native";
 import { createStackNavigator } from "@react-navigation/stack";
-import HomeScreen from "../screens/HomeScreen";
-import ProfileScreen from "../screens/ProfileScreen";
+import HomeScreenForPages from "../screens/HomeScreenForPages";
+import ProfileScreenForPages from "../screens/ProfileScreenForPages";
 
 
 
@@ -13,18 +13,18 @@ export type RootStackParamList = {
 
 const Stack = createStackNavigator<RootStackParamList>();
 
-const AppNavigator: React.FC = () => {
+const AppNavigatorForPages: React.FC = () => {
     return (
         <NavigationContainer>
         <Stack.Navigator initialRouteName = "Home">
         <Stack.Screen
         name = "Home"
-        component = {HomeScreen}
+        component = {HomeScreenForPages}
         options = {{title: 'Home'}}
         />
         <Stack.Screen
         name = "Profile"
-        component = {ProfileScreen}
+        component = {ProfileScreenForPages}
         options = {{title: 'Profile'}}
         />
         </Stack.Navigator>
@@ -32,4 +32,4 @@ const AppNavigator: React.FC = () => {
     );
 }
 
-export default AppNavigator;
+export default AppNavigatorForPages;
