@@ -12,11 +12,12 @@ const Page1 = () => {
     >
       <View style={style.overlay} />
       <View style = {style.container}>
+      <Text style = {style.Header} >Who I am</Text>
         <Image
           source = {require('../image/Gayahh.jpg')} 
           style = {style.image}
         />
-        <Text style = {style.Text}>Hallo!{'\n'}I am Jazric Forte{'\n'}I like BLACK MEN</Text>
+        <Text style = {style.Text}>Hallo!{'\n'}I am Jazric Forte{'\n'}BSIT-2A</Text>
       </View>
     </ImageBackground>
   );
@@ -32,7 +33,23 @@ const style = StyleSheet.create({
         fontSize: 30,
         textAlign: 'center',
         color: '#ffffff',
+        textShadowColor: '#000000', // Outline color
+        textShadowOffset: { width: 2, height: 1 }, 
+        textShadowRadius: 1,
     },
+    Header: {
+      fontSize: 50,
+      textAlign: 'center',
+      color: '#ffffff',
+      textShadowColor: '#000000', // Outline color
+      textShadowOffset: { width: 2, height: 1 }, 
+      textShadowRadius: 1,
+      backgroundColor: 'rgba(119, 5, 140, 0.47)',
+      width: windowWidth * 1,
+      bottom: 100,
+      height: 90,
+      borderRadius: 30,
+  },
     context: {
         fontSize: 24,
         textAlign: 'center',
@@ -45,6 +62,7 @@ const style = StyleSheet.create({
       width: 200,
       height: 200,
       marginTop: 20,
+      borderRadius: 100,
     },
     background: {
       flex: 1,

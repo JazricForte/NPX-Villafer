@@ -12,6 +12,7 @@ const Page2 = () => {
     >
       <View style={style.overlay} />
       <View style={style.container}>
+        <Text style = {style.Header}>What I like</Text>
         <Text style = {style.Text}>I love to play games{'\n'}I love music{'\n'}I love technology{'\n'}And I love Jennifer Anne Zabala Villagomez</Text>
       </View>
     </ImageBackground>
@@ -30,7 +31,22 @@ const style = StyleSheet.create({
         textAlign: 'center',
         color: '#ffffff',
         marginHorizontal: 20,
+        textShadowOffset: { width: 2, height: 1 }, 
+        textShadowRadius: 1,
     },
+    Header: {
+      fontSize: 50,
+      textAlign: 'center',
+      color: '#ffffff',
+      textShadowColor: '#000000', // Outline color
+      textShadowOffset: { width: 2, height: 1 }, 
+      textShadowRadius: 1,
+      backgroundColor: 'rgba(119, 5, 140, 0.47)',
+      width: windowWidth * 1,
+      bottom: 180,
+      height: 90,
+      borderRadius: 30,
+  },
     context: {
         fontSize: 24,
         textAlign: 'center',

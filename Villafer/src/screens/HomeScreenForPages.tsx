@@ -29,7 +29,7 @@ const checkValidity = () => {
                 <View style={styles.overlay} />
         <View style = {styles.container}>
             <KeyboardAvoidingView behavior = 'padding' style = {styles.container}>
-            <Text style = {styles.text}>Ambatubasssssssss</Text>
+            <Text style = {styles.text}>Welcome</Text>
                 <TextInput
                     style = {styles.input}
                     placeholder = 'Enter your user ID'
@@ -70,9 +70,13 @@ const styles = StyleSheet.create({
         width: windowWidth * 0.8,
     },
     text: {
-        fontSize: 40,
+        fontStyle: 'italic',
+        fontSize: 60,
         textAlign: 'center',
         color: 'rgb(255, 255, 255)',
+        textShadowOffset: { width: 2, height: 1 }, 
+        textShadowRadius: 2,
+        bottom: 150,
     },
     button: {
         backgroundColor: 'rgb(115, 0, 255)',
