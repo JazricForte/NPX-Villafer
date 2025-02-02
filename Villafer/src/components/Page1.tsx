@@ -13,7 +13,7 @@ const Page1 = () => {
       <View style={style.overlay} />
       <View style = {style.container}>
         <Image
-          source = {require('../image/please.jpg')} 
+          source = {require('../image/Gayahh.jpg')} 
           style = {style.image}
         />
         <Text style = {style.Text}>Hallo!{'\n'}I am Jazric Forte{'\n'}I like BLACK MEN</Text>
@@ -29,7 +29,7 @@ const style = StyleSheet.create({
       alignItems: 'center',
     },
     Text: {
-        fontSize: 40,
+        fontSize: 30,
         textAlign: 'center',
         color: '#ffffff',
     },

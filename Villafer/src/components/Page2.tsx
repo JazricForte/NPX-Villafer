@@ -26,9 +26,10 @@ const style = StyleSheet.create({
     },
     Text: {
         bottom: 150,
-        fontSize: 40,
+        fontSize: 30,
         textAlign: 'center',
         color: '#ffffff',
+        marginHorizontal: 20,
     },
     context: {
         fontSize: 24,
