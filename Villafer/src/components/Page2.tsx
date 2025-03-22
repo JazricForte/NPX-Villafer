@@ -7,7 +7,7 @@ const { width: windowWidth, height: windowHeight } = Dimensions.get("window");
 const Page2 = () => {
   return (
     <ImageBackground
-          source={require('../image/lovely.png')} // Ensure this path is correct
+          source={require('../image/lovely.png')}
           style={style.background}
     >
       <View style={style.overlay} />
